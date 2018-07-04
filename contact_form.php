@@ -1,6 +1,6 @@
 <?php
 $to = 'my_email@site.com';
-$from = 'robots@site.com';
+$from_email = 'robots@site.com';
 $from_name = 'Org Name';
 $files = '';
 
@@ -56,7 +56,7 @@ if(isset($_POST["hash"]) && $_POST["hash"] == "2DkOqS"){
         <b>Page:</b> '.$page.'<br/>
         ';
         
-        $send_email = multi_attach_mail($to, $subject, $msg, $from, $from_name, $files);
+        $send_email = multi_attach_mail($to, $subject, $msg, $from_email, $from_name, $files);
     }
 
     if(isset($_POST["form_id"]) && $_POST["form_id"] == "2"){
@@ -72,7 +72,7 @@ if(isset($_POST["hash"]) && $_POST["hash"] == "2DkOqS"){
         <b>Page:</b> '.$page.'<br/>
         ';
         
-        $send_email = multi_attach_mail($to, $subject, $msg, $from, $from_name, $files);
+        $send_email = multi_attach_mail($to, $subject, $msg, $from_email, $from_name, $files);
     }
    
 }
